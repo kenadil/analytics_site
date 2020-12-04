@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import DeleteModal from "../Modals/DeleteModal";
 import {
   sortDate,
-  sortGPA,
   sortKey,
 } from "../../Services/sorters";
 import AddModal from "../Modals/AddModal";
@@ -24,7 +23,6 @@ export type RecordType = {
   email: string;
   name: string;
   date: string;
-  gpa: number;
   category: any;
 };
 
@@ -154,15 +152,6 @@ const UserTable = () => {
               defaultSortOrder="descend"
               width={"15%"}
               sorter={sortDate}
-            />
-            <Column
-              title={<b>GPA</b>}
-              width={"10%"}
-              dataIndex="gpa"
-              sorter={sortGPA}
-              render={(text, record) =>
-                (text = Math.round((record.gpa + Number.EPSILON) * 100) / 100)
-              }
             />
             <Column
               title={<b>Adviser</b>}

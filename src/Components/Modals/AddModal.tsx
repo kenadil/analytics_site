@@ -120,7 +120,6 @@ const AddModal = ({ title, onSave, icon, record }: AddModalPropTypes) => {
                     d.getDate() +
                     ", " +
                     d.getFullYear(),
-                  gpa: undefined,
                   category: null,
                 }
           }
@@ -161,14 +160,6 @@ const AddModal = ({ title, onSave, icon, record }: AddModalPropTypes) => {
                   style={{ marginTop: "1vh" }}
                   name="email"
                   placeholder="E-mail"
-                />
-              </Form.Item>
-              <Form.Item name="gpa">
-                <span style={{ marginLeft: "0.25vh" }}>GPA</span>
-                <Input
-                  style={{ marginTop: "1vh" }}
-                  name="gpa"
-                  placeholder="GPA"
                 />
               </Form.Item>
               <Form.Item name="category">
